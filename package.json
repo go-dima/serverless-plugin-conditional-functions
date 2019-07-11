@@ -4,7 +4,8 @@
   "description": "Allow to enable/disable each function with an expression",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint *.js --fix"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   "homepage": "https://github.com/go-dima/serverless-plugin-conditional-functions#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
     "mocha": "^6.1.4"
   }
 }
