@@ -1,5 +1,8 @@
-[![NPM](https://nodei.co/npm/serverless-plugin-conditional-functions.png)](https://nodei.co/npm/serverless-plugin-conditional-functions/)
+[![npm version](https://img.shields.io/npm/v/react-native-restart.svg?style=flat-square)](https://www.npmjs.com/package/react-native-restart)
 [![Build Status](https://api.travis-ci.org/go-dima/serverless-plugin-conditional-functions.png)](https://travis-ci.org/go-dima/serverless-plugin-conditional-functions)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-restart.svg?style=flat-square)](https://www.npmjs.com/package/react-native-restart)
+
+[![NPM](https://nodei.co/npm/serverless-plugin-conditional-functions.png)](https://nodei.co/npm/serverless-plugin-conditional-functions/)
 
 # Serverless Plugin Conditional Functions
 This plugin allows you to add a custom condition to each function in your ```serverless.yml```, to toggle the deployment of your functions.
