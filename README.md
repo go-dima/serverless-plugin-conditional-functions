@@ -6,8 +6,7 @@
 
 # Serverless Plugin Conditional Functions
 This plugin allows you to add a custom condition to each function in your ```serverless.yml```, to toggle the deployment of your functions.
-Effectively, it allows a simple feature-flag per function. 
-The 
+Effectively, it allows a simple feature-flag per function.
 
 For example, if you want to deploy a function for testing only, but don't want it in production, or vice-versa.
 The attribute supports simple ```true/false``` usage or more complex (see below) conditions.
