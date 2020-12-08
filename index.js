@@ -11,6 +11,12 @@ class serverlessPluginConditionalFunctions {
     */
   constructor(serverless, options = {}) {
     this.serverless = serverless;
+    //Define schema for 'enabled' to pass serverless.yml validation
+    serverless.configSchemaHandler.defineFunctionProperties('aws', {
+      properties: {
+        enabled: { type: 'string' }
+      }
+    });
     this.options = options;
     this.hooks = {
       'before:package:initialize': this.applyConditions.bind(this),
