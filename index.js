@@ -12,7 +12,7 @@ class serverlessPluginConditionalFunctions {
   constructor(serverless, options = {}) {
     this.serverless = serverless;
     //Define schema for 'enabled' to pass serverless.yml validation
-    serverless.configSchemaHandler.defineFunctionProperties('aws', {
+    serverless.configSchemaHandler.defineFunctionProperties('*', {
       properties: {
         enabled: { type: 'string' }
       }
