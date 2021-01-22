@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-conditional-functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allow to enable/disable each function with an expression",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,9 @@
     "eslint": "^6.0.1",
     "eslint-config-google": "^0.13.0",
     "mocha": "^6.1.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }
