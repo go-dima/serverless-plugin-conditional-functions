@@ -1,8 +1,11 @@
+name: NPM Publish
+
 on:
   # Trigger the workflow on pull request to master
   push:
     branches:
       - master
+      - ft/publish
 
 jobs:
   publish:
