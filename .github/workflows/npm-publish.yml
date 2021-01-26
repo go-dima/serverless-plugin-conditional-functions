@@ -5,8 +5,7 @@ on:
   push:
     branches:
       - master
-      - ft/publish
-
+     
 jobs:
   publish:
     runs-on: ubuntu-latest
