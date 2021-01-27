@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-conditional-functions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Allow to enable/disable each function with an expression",
   "main": "index.js",
   "scripts": {
