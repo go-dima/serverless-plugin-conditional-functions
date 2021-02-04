@@ -12,7 +12,7 @@ class serverlessPluginConditionalFunctions {
   constructor(serverless, options = {}) {
     this.serverless = serverless;
     //Define schema for 'enabled' to pass serverless.yml validation
-    if (serverless.configSchemaHandler) {
+    if (this.hasValidationSupport(serverless)) {
       serverless.configSchemaHandler.defineFunctionProperties(serverless.service.provider.name, {
         properties: {
           enabled: { type: 'string' }
@@ -93,6 +93,12 @@ class serverlessPluginConditionalFunctions {
         this.pluginName + ' - ' +
             'exception evaluating condition ' + condition + ' : ' +
             exception);
+  }
+
+  hasValidationSupport(serverless) {
+    return serverless.configSchemaHandler &&
+           serverless.configSchemaHandler.defineFunctionProperties &&
+           typeof serverless.configSchemaHandler['defineFunctionProperties'] == 'function'
   }
 }
 
