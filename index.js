@@ -98,6 +98,7 @@ class serverlessPluginConditionalFunctions {
   /**
    * Validates serverless object has required validation fields
    * @param {*} serverless
+   * @return {boolean} Whether installed serverless fw supports validation
    */
   hasValidationSupport(serverless) {
     return serverless.configSchemaHandler &&
