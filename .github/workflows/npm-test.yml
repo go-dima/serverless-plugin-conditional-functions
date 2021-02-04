@@ -1,5 +1,8 @@
 name: NPM Test
-     
+
+on:
+  push:
+
 jobs:
   publish:
     runs-on: ubuntu-latest
