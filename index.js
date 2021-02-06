@@ -11,12 +11,12 @@ class serverlessPluginConditionalFunctions {
     */
   constructor(serverless, options = {}) {
     this.serverless = serverless;
-    //Define schema for 'enabled' to pass serverless.yml validation
-    if (serverless.configSchemaHandler) {
+    // Define schema for 'enabled' to pass serverless.yml validation
+    if (this.hasValidationSupport(serverless)) {
       serverless.configSchemaHandler.defineFunctionProperties(serverless.service.provider.name, {
         properties: {
-          enabled: { type: 'string' }
-        }
+          enabled: {type: 'string'},
+        },
       });
     }
     this.options = options;
@@ -93,6 +93,17 @@ class serverlessPluginConditionalFunctions {
         this.pluginName + ' - ' +
             'exception evaluating condition ' + condition + ' : ' +
             exception);
+  }
+
+  /**
+   * Validates serverless object has required validation fields
+   * @param {*} serverless
+   * @return {boolean} Whether installed serverless fw supports validation
+   */
+  hasValidationSupport(serverless) {
+    return serverless.configSchemaHandler &&
+           serverless.configSchemaHandler.defineFunctionProperties &&
+           typeof serverless.configSchemaHandler['defineFunctionProperties'] == 'function';
   }
 }
 
