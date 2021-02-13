@@ -1,0 +1,29 @@
+service: TestServerlessService
+provider:
+    name: aws
+    stage: test
+    profile: default
+
+plugins:
+  - ../../serverless-plugin-conditional-functions
+
+functions:
+    enabledFuncNoKey:
+        handler: handler.hello
+        name: "Function 1"
+    enabledFuncTrue:
+        handler: handler.hello
+        name: "Function 2"
+        enabled: 'true'
+    enabledFuncComplex:
+        handler: handler.hello
+        name: "Function 3"
+        enabled: '"test" == "test"'
+    disabledFuncFalse:
+        handler: handler.hello
+        name: "Function 4"
+        enabled: 'false'
+    disabledFuncComplex:
+        handler: handler.hello
+        name: "Function 5"
+        enabled: '"test" != "test"'
