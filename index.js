@@ -23,6 +23,7 @@ class serverlessPluginConditionalFunctions {
     this.hooks = {
       'before:package:initialize': this.applyConditions.bind(this),
       'before:offline:start:init': this.applyConditions.bind(this),
+      'before:offline:start': this.applyConditions.bind(this),
     };
     this.pluginName = 'serverless-plugin-conditional-functions';
   }
